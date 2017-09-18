@@ -122,7 +122,7 @@
 <meta property="og:description" content="最近在刷姥姥的PAT乙级，感觉很不爽，各种超时。很无奈，Java的确不适合刷题，同一道题，这边Scanner还在启动，C++都运行完了。特别是PAT很多题目的限制都在100ms，感受到了对Java深深的恶意啊。。。   But，我们不能坐以待毙了，题还是要刷的。那么，一个解决方案就是转移到牛客网，PAT乙级(Basic Level)真题。额，然而有时候牛客网的OJ也超时，好尴尬。 辣么，最大的问题">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/9150e4e5ly1fgcrqge8nej20ci0fa75f.jpg">
-<meta property="og:updated_time" content="2017-09-18T01:00:16.969Z">
+<meta property="og:updated_time" content="2017-09-18T01:23:14.608Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java的输入（针对OJ）">
 <meta name="twitter:description" content="最近在刷姥姥的PAT乙级，感觉很不爽，各种超时。很无奈，Java的确不适合刷题，同一道题，这边Scanner还在启动，C++都运行完了。特别是PAT很多题目的限制都在100ms，感受到了对Java深深的恶意啊。。。   But，我们不能坐以待毙了，题还是要刷的。那么，一个解决方案就是转移到牛客网，PAT乙级(Basic Level)真题。额，然而有时候牛客网的OJ也超时，好尴尬。 辣么，最大的问题">
@@ -417,7 +417,34 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.io.*<span class="comment">// 必须有 "throw IOException"</span></div><div class="line">BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader( System.in ) );</div><div class="line"><span class="keyword">double</span> x = Double.parseDouble( br.readLine() );</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>然后是输入10,000,000个int型变量的时间对比：<br>| Input method        | Time(sec)   |<br>| ——–   | —–:  |<br>| C scanf(“%d”, &amp;arg)     | 3.78 |<br>| Scanner.parseInt()        |   29.52   |<br>| BufferedReader + inline Integer.parseInt       |    2.89    |<br>| BufferedReader + Reader.nextInt       |    3.01    |<br>真·没有对比就没有伤害。。</p>
+<p>然后是输入10,000,000个int型变量的时间对比：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Input method</th>
+<th style="text-align:center">Time(sec)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">C scanf(“%d”, &amp;arg)</td>
+<td style="text-align:center">3.78</td>
+</tr>
+<tr>
+<td style="text-align:center">Scanner.parseInt()</td>
+<td style="text-align:center">29.52</td>
+</tr>
+<tr>
+<td style="text-align:center">BufferedReader + inline Integer.parseInt</td>
+<td style="text-align:center">2.89</td>
+</tr>
+<tr>
+<td style="text-align:center">BufferedReader + Reader.nextInt</td>
+<td style="text-align:center">3.01</td>
+</tr>
+</tbody>
+</table>
+<p>真·没有对比就没有伤害。。</p>
 <p>最后，会C/C++的就不要用Java刷题了。</p>
 
       
