@@ -97,7 +97,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java,基础知识," />
+  <meta name="keywords" content="Java,刷题," />
 
 
 
@@ -113,18 +113,18 @@
 
 
 
-<meta name="description" content="在创建类的过程中，各成员有一个执行顺序：  执行超类（父类）中的静态成员和代码块 执行子类中的静态成员和代码块 执行超类的实例成员和代码块 执行超类的构造函数 执行子类的实例成员和代码 执行子类的构造函数">
-<meta name="keywords" content="Java,基础知识">
+<meta name="description" content="给定一个正整数数列，和正整数p，设这个数列中的最大值是M，最小值是m，如果M &amp;lt;= m * p，则称这个数列是完美数列。现在给定参数p和一些正整数，请你从中选择尽可能多的数构成一个完美数列。">
+<meta name="keywords" content="Java,刷题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="类的初始化顺序">
-<meta property="og:url" content="http://yoursite.com/2017/09/20/Order-of-class-initialization/index.html">
+<meta property="og:title" content="PAT Basic 1030. 完美数列">
+<meta property="og:url" content="http://yoursite.com/2017/09/21/PAT-Basic-1030/index.html">
 <meta property="og:site_name" content="MubaiLi&#39;s Blog">
-<meta property="og:description" content="在创建类的过程中，各成员有一个执行顺序：  执行超类（父类）中的静态成员和代码块 执行子类中的静态成员和代码块 执行超类的实例成员和代码块 执行超类的构造函数 执行子类的实例成员和代码 执行子类的构造函数">
+<meta property="og:description" content="给定一个正整数数列，和正整数p，设这个数列中的最大值是M，最小值是m，如果M &amp;lt;= m * p，则称这个数列是完美数列。现在给定参数p和一些正整数，请你从中选择尽可能多的数构成一个完美数列。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-20T15:38:01.028Z">
+<meta property="og:updated_time" content="2017-09-20T16:11:47.833Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="类的初始化顺序">
-<meta name="twitter:description" content="在创建类的过程中，各成员有一个执行顺序：  执行超类（父类）中的静态成员和代码块 执行子类中的静态成员和代码块 执行超类的实例成员和代码块 执行超类的构造函数 执行子类的实例成员和代码 执行子类的构造函数">
+<meta name="twitter:title" content="PAT Basic 1030. 完美数列">
+<meta name="twitter:description" content="给定一个正整数数列，和正整数p，设这个数列中的最大值是M，最小值是m，如果M &amp;lt;= m * p，则称这个数列是完美数列。现在给定参数p和一些正整数，请你从中选择尽可能多的数构成一个完美数列。">
 
 
 
@@ -154,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/20/Order-of-class-initialization/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/21/PAT-Basic-1030/"/>
 
 
 
 
 
-  <title>类的初始化顺序 | MubaiLi's Blog</title>
+  <title>PAT Basic 1030. 完美数列 | MubaiLi's Blog</title>
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/20/Order-of-class-initialization/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/21/PAT-Basic-1030/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mubai Li">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">类的初始化顺序</h1>
+          <h1 class="post-title" itemprop="name headline">PAT Basic 1030. 完美数列</h1>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-20T23:35:58+08:00">
-                2017-09-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-21T00:09:21+08:00">
+                2017-09-21
               </time>
             
 
@@ -359,8 +359,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java基础知识/" itemprop="url" rel="index">
-                    <span itemprop="name">Java基础知识</span>
+                  <a href="/categories/刷题/" itemprop="url" rel="index">
+                    <span itemprop="name">刷题</span>
                   </a>
                 </span>
 
@@ -396,17 +396,21 @@
       
 
       
-        <p>在创建类的过程中，各成员有一个执行顺序：</p>
-<ol>
-<li>执行超类（父类）中的静态成员和代码块</li>
-<li>执行子类中的静态成员和代码块</li>
-<li>执行超类的实例成员和代码块</li>
-<li>执行超类的构造函数</li>
-<li>执行子类的实例成员和代码</li>
-<li>执行子类的构造函数<a id="more"></a>
-</li>
-</ol>
-<p>用以下的例子说明一下这个执行顺序：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;  </div><div class="line">        Child child = <span class="keyword">new</span> Child();  </div><div class="line">    &#125;  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span> </span>&#123;  </div><div class="line">    &#123;  </div><div class="line">        System.out.println(<span class="string">"超类中的初始化块"</span>);  </div><div class="line">    &#125;  </div><div class="line">    </div><div class="line">    <span class="keyword">static</span> &#123;  </div><div class="line">        System.out.println(<span class="string">"超类中的静态初始化块"</span>);  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Parent</span><span class="params">()</span> </span>&#123;  </div><div class="line">        System.out.println(<span class="string">"超类的构造方法"</span>);  </div><div class="line">    &#125;  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Parent</span> </span>&#123;  </div><div class="line">    &#123;  </div><div class="line">        System.out.println(<span class="string">"子类中的初始化块"</span>);  </div><div class="line">    &#125;  </div><div class="line">    </div><div class="line">    <span class="keyword">static</span> &#123;  </div><div class="line">        System.out.println(<span class="string">"子类中的静态初始化块"</span>);  </div><div class="line">    &#125;  </div><div class="line">      </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Child</span><span class="params">()</span> </span>&#123;  </div><div class="line">        System.out.println(<span class="string">"子类的构造方法"</span>);  </div><div class="line">    &#125;  </div><div class="line">&#125;  </div><div class="line"><span class="comment">/* 运行结果为 超类中的静态初始化块  </span></div><div class="line"><span class="comment">             子类中的静态初始化块  </span></div><div class="line"><span class="comment">             超类中的初始化块  </span></div><div class="line"><span class="comment">             超类的构造方法  </span></div><div class="line"><span class="comment">             子类中的初始化块  </span></div><div class="line"><span class="comment">             子类构造方法</span></div><div class="line"><span class="comment">*/</span></div></pre></td></tr></table></figure></p>
+        <p>给定一个正整数数列，和正整数p，设这个数列中的最大值是M，最小值是m，如果M &lt;= m * p，则称这个数列是完美数列。<br>现在给定参数p和一些正整数，请你从中选择尽可能多的数构成一个完美数列。<br> <a id="more"></a></p>
+<p>输入格式：<br>输入第一行给出两个正整数N和p，其中N（&lt;= 105）是输入的正整数的个数，p（&lt;= 109）是给定的参数。第二行给出N个正整数，每个数不超过109。</p>
+<p>输出格式：<br>在一行中输出最多可以选择多少个数可以用它们组成一个完美数列。</p>
+<p>输入样例：</p>
+<blockquote>
+<p>10 8<br>2 3 20 4 5 1 6 7 8 9</p>
+</blockquote>
+<p>输出样例：</p>
+<blockquote>
+<p>8</p>
+</blockquote>
+<hr>
+<p>大体思路：<br>首先对数组进行从小到大排序，然后我们用双重for循环查找，查找的思路是从第一个元素作为最小数，开始往后找最大数，直到不符合条件，记录下此时的长度，然后将第二个元素作为最小数，再继续找，最后比较长度的最大值并输出。<br>优化循环次数，第一个for循环遍历最小值，第二个for循环从上个数列找到的元素个数位置开始，因为当前数列首元素一定大于上一个数列的首元素。</p>
+<hr>
+<p>Java实现的代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.io.*;</div><div class="line"><span class="keyword">import</span> java.util.Arrays;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</div><div class="line">        String[] str = (br.readLine()).split(<span class="string">" "</span>);</div><div class="line">        <span class="keyword">int</span> N = Integer.parseInt(str[<span class="number">0</span>]);</div><div class="line">        <span class="keyword">int</span> p = Integer.parseInt(str[<span class="number">1</span>]);</div><div class="line">        String[] strNum = (br.readLine()).split(<span class="string">" "</span>);</div><div class="line">        <span class="keyword">int</span>[] num = <span class="keyword">new</span> <span class="keyword">int</span>[N];</div><div class="line">        <span class="keyword">int</span> n = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i ++) &#123;</div><div class="line">            num[i] = Integer.parseInt(strNum[i]);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        Arrays.sort(num);                                          </div><div class="line">        </div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i ++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + n; j &lt; N; j ++) &#123;</div><div class="line">                <span class="keyword">if</span> (num[j] &gt; num[i] * p) &#123;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                &#125;</div><div class="line">                n ++;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        System.out.print(n);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -426,7 +430,7 @@
           
             <a href="/tags/Java/" rel="tag"># Java</a>
           
-            <a href="/tags/基础知识/" rel="tag"># 基础知识</a>
+            <a href="/tags/刷题/" rel="tag"># 刷题</a>
           
         </div>
       
@@ -439,8 +443,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/20/two-types-of-transfer/" rel="next" title="two types of transfer">
-                <i class="fa fa-chevron-left"></i> two types of transfer
+              <a href="/2017/09/20/Order-of-class-initialization/" rel="next" title="类的初始化顺序">
+                <i class="fa fa-chevron-left"></i> 类的初始化顺序
               </a>
             
           </div>
@@ -448,10 +452,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/21/PAT-Basic-1030/" rel="prev" title="PAT Basic 1030. 完美数列">
-                PAT Basic 1030. 完美数列 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
