@@ -395,48 +395,16 @@
 
       
         
-          
-            <p>Java具有两大数据类型：<strong>内置数据类型</strong>和<strong>引用数据类型</strong></p>
+          <p>Java具有两大数据类型：<strong>内置数据类型</strong>和<strong>引用数据类型</strong></p>
 <hr>
-<p>###内置数据类型<br>在Java中，一共有8种基本类型（primitive type）：6种数值类型（4种整型，2种浮点类型），1种字符类型，还有1种布尔型<br>数值型</p>
-<blockquote>
-<ul>
-<li>int<br>存储需求为4字节，取值范围-2,147,483,648(-2^31) ~ 2,147,483,647(2^31 - 1)</li>
-<li>short<br>存储需求为2字节，取值范围-32,768(-2^15) ~ 32,767(2^15-1)</li>
-<li>long<br>存储需求为8字节，取值范围-2^63 ~ 2^63 - 1，数值后缀L，如long a = 100000L</li>
-<li>byte<br>存储需求为1字节，取值范围-128(-2^7) ~ 127((2^7-1)</li>
-<li>float<br>存储需求为4字节，单精度浮点数，后缀F</li>
-<li>double<br>存储需求为8字节，数值精度是float的两倍，（后缀D）</li>
-</ul>
-</blockquote>
-<p>字符类型</p>
-<blockquote>
-<ul>
-<li>char<br>用于表示单个字符，通常用来表示字符常量。其范围从\u0000到\Uffff（Unicode编码）。某些特殊的字符型常量需要使用转义的形式来表示</li>
-</ul>
-</blockquote>
-<p>布尔类型</p>
-<blockquote>
-<ul>
-<li>boolean<br>有两个值：false和true，用来判定逻辑条件。整型值和布尔值之间不能相互转换。</li>
-</ul>
-</blockquote>
-<hr>
-<p>###引用数据类型<br>Java有3中引用类型：类（class）、接口（interface）、数组（array）<br>引用类型指向一个对象，指向对象的变量是引用变量。所有引用类型的默认值都是null。<br>对于类，常用的Object和<strong>String</strong>等。</p>
-<hr>
-<p>###String<br>Java没有内置的字符串类型，而是在标准Java类库中提供了一个域定义类，叫做String。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String emp = <span class="string">""</span>; <span class="comment">//空字符串</span></div><div class="line">String str = <span class="string">"Hello world"</span>;</div></pre></td></tr></table></figure></p>
-<p>String类没有提供用于修改字符串的方法，在Java文档中将String类对象称为<strong>不可变字符串</strong>。<br>想要修改字符串，可以先提取需要的字符，然后进行拼接<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String str = <span class="string">"Hello world"</span>;</div><div class="line">str = str.substring(<span class="number">0.3</span>) + <span class="string">"p!"</span>; <span class="comment">//将str当前值修改为“Help！”</span></div></pre></td></tr></table></figure></p>
-<p>可以使用equals方法检测两个字符串是否相等<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">str1.equals(str2); <span class="comment">//可以是字符串变量，也可以是字符串常量</span></div></pre></td></tr></table></figure></p>
-<p>“==”运算符检测的不是两个字符串是否相等，而是它们的地址是否相同。</p>
-<p>字符串连接的方式很多时候效率比较低，这个时候需要使用StringBuilder类。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">StringBuilder builder = <span class="keyword">new</span> StringBuilder();</div><div class="line">builder.append(ch);    <span class="comment">//添加一个字符</span></div><div class="line">builder.append(str);   <span class="comment">//添加一个字符串</span></div><div class="line">String completedString = builder.toString(); <span class="comment">//构建字符串</span></div></pre></td></tr></table></figure></p>
-<p>StringBuilder类在Java 5中被提出，它和其前身StringBuffer之间的最大不同在于StringBuilder的方法不是线程安全的（不能同步访问）。</p>
-<p>那么构造String类的时候，内存空间是怎么分配的呢<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String str1 = <span class="string">"hello"</span>;</div><div class="line">String str2 = <span class="keyword">new</span> String(<span class="string">"hello"</span>);</div></pre></td></tr></table></figure></p>
-<p>对于str1，引用str1被存放在<strong>栈</strong>区，字符串常量”hello”被存放在<strong>常量池</strong>，引用str1指向了常量池中的”hello”(str1中的存放了常量池中”hello”的地址)；<br>对于str2，引用str2被存放在<strong>栈</strong>区，同时在<strong>堆</strong>区开辟一块内存用于存放一个新的String类型对象。（同上，str2指向了堆区新开辟的String类型的对象）。</p>
-<blockquote>
-<p>不同内存区域的功能和特点：<br>栈区：存放局部变量（变量名，对象的引用等），内存随着函数的调用而开辟，随着函数调用结束而释放。<br>堆区：存放new出来的对象，可以跨函数使用，每个对象有自己对应的存储空间。<br>静态域：存放在对象中定义的静态（static）成员。<br>常量池：存放常量。（常量池指的是在编译期被确定，并被保存在已编译的.class文件中的一些数据）</p>
-</blockquote>
-
-          
+<h3 id="内置数据类型"><a href="#内置数据类型" class="headerlink" title="内置数据类型"></a>内置数据类型</h3><p>在Java中，一共有8种基本类型（primitive type）：6种数值类型（4种整型，2种浮点类型），1种字符类型，还有1种布尔型<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/20/String-type/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
