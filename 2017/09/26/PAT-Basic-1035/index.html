@@ -113,20 +113,18 @@
 
 
 
-<meta name="description" content="最近在刷姥姥的PAT乙级，感觉很不爽，各种超时。很无奈，Java的确不适合刷题，同一道题，这边Scanner还在启动，C++都运行完了。特别是PAT很多题目的限制都在100ms，感受到了对Java深深的恶意啊。。。   But，我们不能坐以待毙了，题还是要刷的。那么，一个解决方案就是转移到牛客网，PAT乙级(Basic Level)真题。额，然而有时候牛客网的OJ也超时，好尴尬。 辣么，最大的问题">
+<meta name="description" content="根据维基百科的定义： 插入排序是迭代算法，逐一获得输入数据，逐步产生有序的输出序列。每步迭代中，算法从输入序列中取出一元素，将之插入有序序列中正确的位置。如此迭代直到全部元素有序。">
 <meta name="keywords" content="Java,刷题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java的输入（针对OJ）">
-<meta property="og:url" content="http://yoursite.com/2017/09/18/Input-for-Java/index.html">
+<meta property="og:title" content="PAT Basic 1035. 插入与归并">
+<meta property="og:url" content="http://yoursite.com/2017/09/26/PAT-Basic-1035/index.html">
 <meta property="og:site_name" content="MubaiLi&#39;s Blog">
-<meta property="og:description" content="最近在刷姥姥的PAT乙级，感觉很不爽，各种超时。很无奈，Java的确不适合刷题，同一道题，这边Scanner还在启动，C++都运行完了。特别是PAT很多题目的限制都在100ms，感受到了对Java深深的恶意啊。。。   But，我们不能坐以待毙了，题还是要刷的。那么，一个解决方案就是转移到牛客网，PAT乙级(Basic Level)真题。额，然而有时候牛客网的OJ也超时，好尴尬。 辣么，最大的问题">
+<meta property="og:description" content="根据维基百科的定义： 插入排序是迭代算法，逐一获得输入数据，逐步产生有序的输出序列。每步迭代中，算法从输入序列中取出一元素，将之插入有序序列中正确的位置。如此迭代直到全部元素有序。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/9150e4e5ly1fgcrqge8nej20ci0fa75f.jpg">
-<meta property="og:updated_time" content="2017-09-20T07:46:06.835Z">
+<meta property="og:updated_time" content="2017-09-26T01:12:29.223Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java的输入（针对OJ）">
-<meta name="twitter:description" content="最近在刷姥姥的PAT乙级，感觉很不爽，各种超时。很无奈，Java的确不适合刷题，同一道题，这边Scanner还在启动，C++都运行完了。特别是PAT很多题目的限制都在100ms，感受到了对Java深深的恶意啊。。。   But，我们不能坐以待毙了，题还是要刷的。那么，一个解决方案就是转移到牛客网，PAT乙级(Basic Level)真题。额，然而有时候牛客网的OJ也超时，好尴尬。 辣么，最大的问题">
-<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/9150e4e5ly1fgcrqge8nej20ci0fa75f.jpg">
+<meta name="twitter:title" content="PAT Basic 1035. 插入与归并">
+<meta name="twitter:description" content="根据维基百科的定义： 插入排序是迭代算法，逐一获得输入数据，逐步产生有序的输出序列。每步迭代中，算法从输入序列中取出一元素，将之插入有序序列中正确的位置。如此迭代直到全部元素有序。">
 
 
 
@@ -156,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/18/Input-for-Java/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/26/PAT-Basic-1035/"/>
 
 
 
 
 
-  <title>Java的输入（针对OJ） | MubaiLi's Blog</title>
+  <title>PAT Basic 1035. 插入与归并 | MubaiLi's Blog</title>
   
 
 
@@ -309,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/Input-for-Java/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/26/PAT-Basic-1035/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mubai Li">
@@ -326,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java的输入（针对OJ）</h1>
+          <h1 class="post-title" itemprop="name headline">PAT Basic 1035. 插入与归并</h1>
         
 
         <div class="post-meta">
@@ -338,8 +336,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T08:56:30+08:00">
-                2017-09-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-26T09:11:25+08:00">
+                2017-09-26
               </time>
             
 
@@ -398,56 +396,32 @@
       
 
       
-        <p>最近在刷姥姥的PAT乙级，感觉很不爽，各种超时。很无奈，Java的确不适合刷题，同一道题，这边Scanner还在启动，C++都运行完了。特别是PAT很多题目的限制都在100ms，感受到了对Java深深的恶意啊。。。</p>
-<center><img src="https://ws2.sinaimg.cn/large/9150e4e5ly1fgcrqge8nej20ci0fa75f.jpg" alt=""></center>
-
-<p>But，我们不能坐以待毙了，题还是要刷的。<br>那么，一个解决方案就是转移到<a href="https://www.nowcoder.com" target="_blank" rel="external">牛客网</a>，<a href="https://www.nowcoder.com/pat/6/problems" target="_blank" rel="external">PAT乙级(Basic Level)真题</a>。<br>额，然而有时候牛客网的OJ也超时，好尴尬。</p>
-<p>辣么，最大的问题在哪儿呢？<br> <strong>Scanner is too <em>Slooooow</em> !!!</strong><br> <a id="more"></a></p>
-<p>我们来回顾一下一般的Java的输入：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Scanner input = <span class="keyword">new</span> Scanner (System.in);</div><div class="line"><span class="keyword">int</span> n = input.nextInt(); <span class="comment">//读一个整数</span></div><div class="line"><span class="keyword">double</span> t = input.nextDouble(); <span class="comment">//读一个浮点数</span></div><div class="line">String str = input.next(); <span class="comment">//读一个字符串</span></div><div class="line">String str_line = input.nextLine();  <span class="comment">//读一整行</span></div><div class="line">sc.hasNext(); <span class="comment">//判断是否有下一个输入</span></div></pre></td></tr></table></figure>
-<p>简洁明了，有木有，又好写，又好用。<br>可是慢呀。。。。<br>这时候我想起了BufferedReader，抛弃掉Scanner，转用BufferedReader，我惊奇的发现，之前好多超时的题目神奇的通过了，yeah~<br>以PAT乙级的<a href="https://www.patest.cn/contests/pat-b-practise/1027" target="_blank" rel="external">1027. 打印沙漏</a> 为例， 看一下利用BufferedReader来进行输入：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</div><div class="line">        String[] str = (br.readLine()).split(<span class="string">" "</span>);</div><div class="line">        <span class="keyword">int</span> N = Integer.parseInt(str[<span class="number">0</span>]);</div><div class="line">        <span class="keyword">char</span> ch = str[<span class="number">1</span>].charAt(<span class="number">0</span>);</div><div class="line">        </div><div class="line">        printCh(N, ch);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<p>是不是感觉好麻烦，代码也不好写，感觉乱糟糟的，可是比Scanner快多了。</p>
-<p>下面，我们来对比一下C还有Java的这两种输入方式：<br>同样都是输入一个double型的变量</p>
-<ul>
-<li><p>C</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">double</span> x;</div><div class="line"><span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;x);</div></pre></td></tr></table></figure>
-</li>
-<li><p>Java with Scanner</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Scanner input = <span class="keyword">new</span> Scanner(System.in);</div><div class="line"><span class="keyword">double</span> x = input.nextDouble();</div></pre></td></tr></table></figure>
-</li>
-<li><p>Java with BufferedReader</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.io.*<span class="comment">// 必须有 "throw IOException"</span></div><div class="line">BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader( System.in ) );</div><div class="line"><span class="keyword">double</span> x = Double.parseDouble( br.readLine() );</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>然后是输入10,000,000个int型变量的时间对比：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Input method</th>
-<th style="text-align:center">Time(sec)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">C scanf(“%d”, &amp;arg)</td>
-<td style="text-align:center">3.78</td>
-</tr>
-<tr>
-<td style="text-align:center">Scanner.parseInt()</td>
-<td style="text-align:center">29.52</td>
-</tr>
-<tr>
-<td style="text-align:center">BufferedReader + inline Integer.parseInt</td>
-<td style="text-align:center">2.89</td>
-</tr>
-<tr>
-<td style="text-align:center">BufferedReader + Reader.nextInt</td>
-<td style="text-align:center">3.01</td>
-</tr>
-</tbody>
-</table>
-<p>真·没有对比就没有伤害。。</p>
-<p>最后，会C/C++的就不要用Java刷题了。</p>
+        <p>根据维基百科的定义：</p>
+<p>插入排序是迭代算法，逐一获得输入数据，逐步产生有序的输出序列。每步迭代中，算法从输入序列中取出一元素，将之插入有序序列中正确的位置。如此迭代直到全部元素有序。<br> <a id="more"></a><br>归并排序进行如下迭代操作：首先将原始序列看成N个只包含1个元素的有序子序列，然后每次迭代归并两个相邻的有序子序列，直到最后只剩下1个有序的序列。</p>
+<p>现给定原始序列和由某排序算法产生的中间序列，请你判断该算法究竟是哪种排序算法？</p>
+<p>输入格式：</p>
+<p>输入在第一行给出正整数N (&lt;=100)；随后一行给出原始序列的N个整数；最后一行给出由某排序算法产生的中间序列。这里假设排序的目标序列是升序。数字间以空格分隔。</p>
+<p>输出格式：</p>
+<p>首先在第1行中输出“Insertion Sort”表示插入排序、或“Merge Sort”表示归并排序；然后在第2行中输出用该排序算法再迭代一轮的结果序列。题目保证每组测试的结果是唯一的。数字间以空格分隔，且行末不得有多余空格。<br>输入样例1：</p>
+<blockquote>
+<p>10<br>3 1 2 8 7 5 9 4 6 0<br>1 2 3 7 8 5 9 4 6 0</p>
+</blockquote>
+<p>输出样例1：</p>
+<blockquote>
+<p>Insertion Sort<br>1 2 3 5 7 8 9 4 6 0</p>
+</blockquote>
+<p>输入样例2：</p>
+<blockquote>
+<p>10<br>3 1 2 8 7 5 9 4 0 6<br>1 3 2 8 5 7 4 9 0 6</p>
+</blockquote>
+<p>输出样例2：</p>
+<blockquote>
+<p>Merge Sort<br>1 2 3 8 4 5 7 9 0 6</p>
+</blockquote>
+<hr>
+<p>基本思路：<br>遍历排序中的数列，找到第一个不符合顺序的数字，从这儿之后的数组如果和原始数列中这部分数组相同，那么就说明这是插入排序，否则就是归并排序。<br>如果是插入排序，对已排好序的数列和下一个数字进行排序即可；如果是归并排序，可以从头做归并排序，每一步和输入的中间数列比较。</p>
+<hr>
+<p>Java实现代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.io.BufferedReader;</div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.io.InputStreamReader;</div><div class="line"><span class="keyword">import</span> java.util.Arrays;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</div><div class="line">        String N_str = br.readLine();</div><div class="line">        <span class="keyword">int</span> N = Integer.parseInt(N_str);</div><div class="line">        String[] num_str = (br.readLine()).split(<span class="string">" "</span>);</div><div class="line">        String[] mid_str = (br.readLine()).split(<span class="string">" "</span>);</div><div class="line">        <span class="keyword">int</span>[] num = <span class="keyword">new</span> <span class="keyword">int</span>[N];</div><div class="line">        <span class="keyword">int</span>[] mid = <span class="keyword">new</span> <span class="keyword">int</span>[N];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i ++) &#123;</div><div class="line">            num[i] = Integer.parseInt(num_str[i]);</div><div class="line">            mid[i] = Integer.parseInt(mid_str[i]);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">boolean</span> isInsert = <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i ++) &#123;</div><div class="line">            <span class="keyword">if</span> (mid[i] &gt; mid[i + <span class="number">1</span>]) &#123;</div><div class="line">                index = i; <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = index + <span class="number">1</span>; i &lt; N; i ++) &#123;</div><div class="line">            <span class="keyword">if</span> (mid[i] != num[i]) &#123;</div><div class="line">                isInsert = <span class="keyword">false</span>; <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">if</span> (isInsert) &#123;</div><div class="line">            System.out.println(<span class="string">"Insertion Sort"</span>);</div><div class="line">            Arrays.sort(mid, <span class="number">0</span>, index + <span class="number">2</span>);</div><div class="line">            print(mid);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            System.out.println(<span class="string">"Merge Sort"</span>);</div><div class="line">            <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</div><div class="line">            <span class="keyword">int</span> k = <span class="number">1</span>;</div><div class="line">            <span class="keyword">while</span> (flag) &#123;</div><div class="line">                flag = <span class="keyword">false</span>;</div><div class="line">                <span class="keyword">if</span> (!isEqual(num, mid)) &#123;</div><div class="line">                    flag = <span class="keyword">true</span>;</div><div class="line">                &#125;</div><div class="line">                k = k * <span class="number">2</span>;</div><div class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N / k; i ++) &#123;</div><div class="line">                    Arrays.sort(num, k * i, k * (i + <span class="number">1</span>));</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            print(num);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isEqual</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span>[] b)</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i ++) &#123;</div><div class="line">            <span class="keyword">if</span> (a[i] != b[i]) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span>[] n)</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n.length - <span class="number">1</span>; i ++) &#123;</div><div class="line">            System.out.printf(<span class="string">"%d "</span>, n[i]);</div><div class="line">        &#125;</div><div class="line">        System.out.printf(<span class="string">"%d"</span>, n[n.length - <span class="number">1</span>]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -480,8 +454,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/15/MubaiLi-s-Blog/" rel="next" title="Hello World !">
-                <i class="fa fa-chevron-left"></i> Hello World !
+              <a href="/2017/09/25/try-catch-finally/" rel="next" title="异常处理中try-catch-finally语句块">
+                <i class="fa fa-chevron-left"></i> 异常处理中try-catch-finally语句块
               </a>
             
           </div>
@@ -489,10 +463,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/19/override-and-overload/" rel="prev" title="关于继承和多态以及重写、重载和覆盖等简单概念">
-                关于继承和多态以及重写、重载和覆盖等简单概念 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
