@@ -113,18 +113,18 @@
 
 
 
-<meta name="description" content="本题要求将给定的N个正整数按非递增的顺序，填入“螺旋矩阵”。所谓“螺旋矩阵”，是指从左上角第1个格子开始，按顺时针螺旋方向填充。要求矩阵的规模为m行n列，满足条件：m*n等于N；m&amp;gt;=n；且m-n取所有可能值中的最小值。">
+<meta name="description" content="拍集体照时队形很重要，这里对给定的N个人K排的队形设计排队规则如下：  每排人数为N/K（向下取整），多出来的人全部站在最后一排； 后排所有人的个子都不比前排任何人矮； 每排中最高者站中间（中间位置为m/2+1，其中m为该排人数，除法向下取整）； 每排其他人以中间人为轴，按身高非增序，先右后左交替入队站在中间人的两侧（例如5人身高为190、188、186、175、170，则队形为175、188、1">
 <meta name="keywords" content="Java,刷题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PAT Basic 1050. 螺旋矩阵">
-<meta property="og:url" content="http://yoursite.com/2017/10/01/PAT-Basic-1050/index.html">
+<meta property="og:title" content="PAT Basic 1055. 集体照">
+<meta property="og:url" content="http://yoursite.com/2017/10/03/PAT-Basic-1055/index.html">
 <meta property="og:site_name" content="MubaiLi&#39;s Blog">
-<meta property="og:description" content="本题要求将给定的N个正整数按非递增的顺序，填入“螺旋矩阵”。所谓“螺旋矩阵”，是指从左上角第1个格子开始，按顺时针螺旋方向填充。要求矩阵的规模为m行n列，满足条件：m*n等于N；m&amp;gt;=n；且m-n取所有可能值中的最小值。">
+<meta property="og:description" content="拍集体照时队形很重要，这里对给定的N个人K排的队形设计排队规则如下：  每排人数为N/K（向下取整），多出来的人全部站在最后一排； 后排所有人的个子都不比前排任何人矮； 每排中最高者站中间（中间位置为m/2+1，其中m为该排人数，除法向下取整）； 每排其他人以中间人为轴，按身高非增序，先右后左交替入队站在中间人的两侧（例如5人身高为190、188、186、175、170，则队形为175、188、1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-01T08:33:06.414Z">
+<meta property="og:updated_time" content="2017-10-03T01:27:04.343Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PAT Basic 1050. 螺旋矩阵">
-<meta name="twitter:description" content="本题要求将给定的N个正整数按非递增的顺序，填入“螺旋矩阵”。所谓“螺旋矩阵”，是指从左上角第1个格子开始，按顺时针螺旋方向填充。要求矩阵的规模为m行n列，满足条件：m*n等于N；m&amp;gt;=n；且m-n取所有可能值中的最小值。">
+<meta name="twitter:title" content="PAT Basic 1055. 集体照">
+<meta name="twitter:description" content="拍集体照时队形很重要，这里对给定的N个人K排的队形设计排队规则如下：  每排人数为N/K（向下取整），多出来的人全部站在最后一排； 后排所有人的个子都不比前排任何人矮； 每排中最高者站中间（中间位置为m/2+1，其中m为该排人数，除法向下取整）； 每排其他人以中间人为轴，按身高非增序，先右后左交替入队站在中间人的两侧（例如5人身高为190、188、186、175、170，则队形为175、188、1">
 
 
 
@@ -154,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/01/PAT-Basic-1050/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/03/PAT-Basic-1055/"/>
 
 
 
 
 
-  <title>PAT Basic 1050. 螺旋矩阵 | MubaiLi's Blog</title>
+  <title>PAT Basic 1055. 集体照 | MubaiLi's Blog</title>
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/01/PAT-Basic-1050/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/03/PAT-Basic-1055/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mubai Li">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PAT Basic 1050. 螺旋矩阵</h1>
+          <h1 class="post-title" itemprop="name headline">PAT Basic 1055. 集体照</h1>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-01T16:32:15+08:00">
-                2017-10-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-03T09:26:02+08:00">
+                2017-10-03
               </time>
             
 
@@ -396,25 +396,30 @@
       
 
       
-        <p>本题要求将给定的N个正整数按非递增的顺序，填入“螺旋矩阵”。所谓“螺旋矩阵”，是指从左上角第1个格子开始，按顺时针螺旋方向填充。要求矩阵的规模为m行n列，满足条件：m*n等于N；m&gt;=n；且m-n取所有可能值中的最小值。<br> <a id="more"></a></p>
-<p>输入格式：</p>
-<p>输入在第1行中给出一个正整数N，第2行给出N个待填充的正整数。所有数字不超过104，相邻数字以空格分隔。</p>
+        <p>拍集体照时队形很重要，这里对给定的N个人K排的队形设计排队规则如下：</p>
+<ul>
+<li>每排人数为N/K（向下取整），多出来的人全部站在最后一排；</li>
+<li>后排所有人的个子都不比前排任何人矮；</li>
+<li>每排中最高者站中间（中间位置为m/2+1，其中m为该排人数，除法向下取整）；</li>
+<li>每排其他人以中间人为轴，按身高非增序，先右后左交替入队站在中间人的两侧（例如5人身高为190、188、186、175、170，则队形为175、188、190、186、170。这里假设你面对拍照者，所以你的左边是中间人的右边）；</li>
+<li>若多人身高相同，则按名字的字典序升序排列。这里保证无重名。<br>现给定一组拍照人，请编写程序输出他们的队形。<a id="more"></a>
+输入格式：</li>
+</ul>
+<p>每个输入包含1个测试用例。每个测试用例第1行给出两个正整数N（&lt;=10000，总人数）和K（&lt;=10，总排数）。随后N行，每行给出一个人的名字（不包含空格、长度不超过8个英文字母）和身高（[30, 300]区间内的整数）。</p>
 <p>输出格式：</p>
-<p>输出螺旋矩阵。每行n个数字，共m行。相邻数字以1个空格分隔，行末不得有多余空格。</p>
+<p>输出拍照的队形。即K排人名，其间以空格分隔，行末不得有多余空格。注意：假设你面对拍照者，后排的人输出在上方，前排输出在下方。</p>
 <p>输入样例：</p>
 <blockquote>
-<p>12<br>37 76 20 98 76 42 53 95 60 81 58 93</p>
+<p>10 3<br>Tom 188<br>Mike 170<br>Eva 168<br>Tim 160<br>Joe 190<br>Ann 168<br>Bob 175<br>Nick 186<br>Amy 160<br>John 159</p>
 </blockquote>
 <p>输出样例：</p>
 <blockquote>
-<p>98 95 93<br>42 37 81<br>53 20 76<br>58 60 76</p>
+<p>Bob Tom Joe Nick<br>Ann Mike Eva<br>Tim Amy John</p>
 </blockquote>
 <hr>
-<p>基本思路：<br>首先根据输入的N，得到符合条件的m和n；将数组排序，然后通过while循环进行螺旋矩阵的赋值，每一圈螺旋都用4个while循环分别进行→ ↓ ← ↑。</p>
+<p>基本思路：<br>建立Student类存姓名和身高，利用Comparable接口中的compareTo方法，根据身高进行排序（由低到高）。然后用一个while循环，从最后一排开始，按照题目要求的方式进行队形设计。</p>
 <hr>
-<p>Java实现代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.io.BufferedReader;</div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.io.InputStreamReader;</div><div class="line"><span class="keyword">import</span> java.util.Arrays;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</div><div class="line">        String N_str = br.readLine();</div><div class="line">        <span class="keyword">int</span> N = Integer.parseInt(N_str);</div><div class="line">        String[] str = (br.readLine()).split(<span class="string">" "</span>);</div><div class="line">        <span class="keyword">int</span>[] num = <span class="keyword">new</span> <span class="keyword">int</span>[N];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i ++) &#123;</div><div class="line">            num[i] = Integer.parseInt(str[i]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> m = <span class="number">1</span>, n = <span class="number">1</span>; <span class="keyword">int</span> min = <span class="number">100001</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= Math.sqrt(N); i ++) &#123;</div><div class="line">            <span class="keyword">if</span> (N % i == <span class="number">0</span>) &#123;</div><div class="line">                <span class="keyword">int</span> j = N / i;</div><div class="line">                </div><div class="line">                <span class="keyword">if</span> (min &gt; j - i) &#123;</div><div class="line">                    m = j;</div><div class="line">                    n = i;</div><div class="line">                    min = m - n;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        Arrays.sort(num);</div><div class="line">        </div><div class="line">        <span class="keyword">int</span>[][] matrix = <span class="keyword">new</span> <span class="keyword">int</span>[m][n];</div><div class="line">        <span class="keyword">int</span> index = N - <span class="number">1</span>;</div><div class="line">        <span class="keyword">int</span> row = <span class="number">0</span>, col = <span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span> (index &gt;= <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">while</span> (index &gt;= <span class="number">0</span> &amp;&amp; col &lt; n &amp;&amp; matrix[row][col] == <span class="number">0</span>) &#123;</div><div class="line">                matrix[row][col] = num[index--];</div><div class="line">                col ++;</div><div class="line">            &#125;</div><div class="line">            row ++; col --;</div><div class="line">            </div><div class="line">            <span class="keyword">while</span> (index &gt;= <span class="number">0</span> &amp;&amp; row &lt; m &amp;&amp; matrix[row][col] == <span class="number">0</span>) &#123;</div><div class="line">                matrix[row][col] = num[index--];</div><div class="line">                row ++;</div><div class="line">            &#125;</div><div class="line">            row --; col --;</div><div class="line">            </div><div class="line">            <span class="keyword">while</span> (index &gt;= <span class="number">0</span> &amp;&amp; col &gt;= <span class="number">0</span> &amp;&amp; matrix[row][col] == <span class="number">0</span>) &#123;</div><div class="line">                matrix[row][col] = num[index--];</div><div class="line">                col --;</div><div class="line">            &#125;</div><div class="line">            row --; col ++;</div><div class="line">            </div><div class="line">            <span class="keyword">while</span> (index &gt;= <span class="number">0</span> &amp;&amp; row &gt;= <span class="number">0</span> &amp;&amp; matrix[row][col] == <span class="number">0</span>) &#123;</div><div class="line">                matrix[row][col] = num[index--];</div><div class="line">                row --;</div><div class="line">            &#125;</div><div class="line">            row ++; col ++;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i ++) &#123;</div><div class="line">            System.out.print(matrix[i][<span class="number">0</span>]);</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n; j ++) &#123;</div><div class="line">                System.out.print(<span class="string">" "</span> + matrix[i][j]);</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            System.out.printf(<span class="string">"\n"</span>);</div><div class="line">        &#125;</div><div class="line">    </div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<hr>
-<p>网上看到有人用刷油漆游戏来描述了螺旋的过程，很形象<br><a href="https://www.cnblogs.com/zhengkang/p/5730503.html" target="_blank" rel="external">PAT-B 1050.螺旋矩阵 - zkang - 博客园</a></p>
+<p>Java实现代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.io.BufferedReader;</div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.io.InputStreamReader;</div><div class="line"><span class="keyword">import</span> java.util.Arrays;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</div><div class="line">        String[] N_str = (br.readLine()).split(<span class="string">" "</span>);</div><div class="line">        <span class="keyword">int</span> N = Integer.parseInt(N_str[<span class="number">0</span>]);</div><div class="line">        <span class="keyword">int</span> K = Integer.parseInt(N_str[<span class="number">1</span>]);</div><div class="line">        <span class="keyword">int</span> M = N / K;</div><div class="line">        <span class="keyword">int</span> M_last = M + N % K;</div><div class="line">        </div><div class="line">        Student1055[] stu = <span class="keyword">new</span> Student1055[N];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i ++) &#123;</div><div class="line">            String[] str = (br.readLine()).split(<span class="string">" "</span>);</div><div class="line">            stu[i] = <span class="keyword">new</span> Student1055(str[<span class="number">0</span>], Integer.parseInt(str[<span class="number">1</span>]));</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        Arrays.sort(stu);</div><div class="line">        </div><div class="line">        <span class="keyword">int</span> row = K; <span class="keyword">int</span> m, mid; <span class="keyword">int</span> index = <span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span>(row != <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (row == K) &#123;</div><div class="line">                m = M_last;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                m = M;</div><div class="line">            &#125;</div><div class="line">            mid = m / <span class="number">2</span>;</div><div class="line">            String[] str = <span class="keyword">new</span> String[m];</div><div class="line">            str[mid] = stu[index].name;</div><div class="line">            <span class="keyword">int</span> left = mid - <span class="number">1</span>;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = index + <span class="number">1</span>; i &lt; index + m; i += <span class="number">2</span>) &#123;</div><div class="line">                str[left --] = stu[i].name;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">int</span> right = mid + <span class="number">1</span>;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = index + <span class="number">2</span>; i &lt; index + m; i += <span class="number">2</span>) &#123;</div><div class="line">                str[right ++] = stu[i].name;</div><div class="line">            &#125;</div><div class="line">            System.out.print(str[<span class="number">0</span>]);</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; i ++) &#123;</div><div class="line">                System.out.print(<span class="string">" "</span> + str[i]);</div><div class="line">            &#125;</div><div class="line">            System.out.printf(<span class="string">"\n"</span>);</div><div class="line">            index += m;</div><div class="line">            row --;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student1055</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">Student1055</span>&gt; </span>&#123;</div><div class="line">    String name;</div><div class="line">    <span class="keyword">int</span> height;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student1055</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>(<span class="string">""</span>, <span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student1055</span><span class="params">(String aName, <span class="keyword">int</span> aHeight)</span> </span>&#123;</div><div class="line">        name = aName;</div><div class="line">        height = aHeight;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Student1055 o)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.height &lt; o.height) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.height &gt; o.height) &#123;</div><div class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name.compareTo(o.name);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -447,8 +452,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/26/PAT-Basic-1035/" rel="next" title="PAT Basic 1035. 插入与归并">
-                <i class="fa fa-chevron-left"></i> PAT Basic 1035. 插入与归并
+              <a href="/2017/10/01/PAT-Basic-1054/" rel="next" title="PAT Basic 1054. 求平均值">
+                <i class="fa fa-chevron-left"></i> PAT Basic 1054. 求平均值
               </a>
             
           </div>
@@ -457,8 +462,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/10/01/PAT-Basic-1054/" rel="prev" title="PAT Basic 1054. 求平均值">
-                PAT Basic 1054. 求平均值 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/10/03/Comparable-interface/" rel="prev" title="Cmparable接口和compareTo方法">
+                Cmparable接口和compareTo方法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

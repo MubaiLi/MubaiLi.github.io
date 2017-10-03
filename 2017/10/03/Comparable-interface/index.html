@@ -113,18 +113,18 @@
 
 
 
-<meta name="description" content="值传递方法调用时，实际参数把它的值传递给对应的形式参数，形参改变，不影响实参。传递的是值的拷贝，拷贝的值用完之后就会被释放。">
+<meta name="description" content="接口（interface），在JAVA编程语言中是一个抽象类型，是抽象方法的集合。一个类可以实现（implement）一个或多个接口，并在需要接口的地方，随时使用实现了相应接口的对象。接口并不是类，编写接口的方式和类很相似，但是它们属于不同的概念。接口无法被实例化，但是可以被实现。一个实现接口的类，必须实现接口内所描述的所有方法，否则就必须声明为抽象类。接口没有构造方法。接口中每一个方法也是隐式抽">
 <meta name="keywords" content="Java,基础知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="two types of transfer">
-<meta property="og:url" content="http://yoursite.com/2017/09/20/two-types-of-transfer/index.html">
+<meta property="og:title" content="Cmparable接口和compareTo方法">
+<meta property="og:url" content="http://yoursite.com/2017/10/03/Comparable-interface/index.html">
 <meta property="og:site_name" content="MubaiLi&#39;s Blog">
-<meta property="og:description" content="值传递方法调用时，实际参数把它的值传递给对应的形式参数，形参改变，不影响实参。传递的是值的拷贝，拷贝的值用完之后就会被释放。">
+<meta property="og:description" content="接口（interface），在JAVA编程语言中是一个抽象类型，是抽象方法的集合。一个类可以实现（implement）一个或多个接口，并在需要接口的地方，随时使用实现了相应接口的对象。接口并不是类，编写接口的方式和类很相似，但是它们属于不同的概念。接口无法被实例化，但是可以被实现。一个实现接口的类，必须实现接口内所描述的所有方法，否则就必须声明为抽象类。接口没有构造方法。接口中每一个方法也是隐式抽">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-20T15:16:16.103Z">
+<meta property="og:updated_time" content="2017-10-03T09:12:42.566Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="two types of transfer">
-<meta name="twitter:description" content="值传递方法调用时，实际参数把它的值传递给对应的形式参数，形参改变，不影响实参。传递的是值的拷贝，拷贝的值用完之后就会被释放。">
+<meta name="twitter:title" content="Cmparable接口和compareTo方法">
+<meta name="twitter:description" content="接口（interface），在JAVA编程语言中是一个抽象类型，是抽象方法的集合。一个类可以实现（implement）一个或多个接口，并在需要接口的地方，随时使用实现了相应接口的对象。接口并不是类，编写接口的方式和类很相似，但是它们属于不同的概念。接口无法被实例化，但是可以被实现。一个实现接口的类，必须实现接口内所描述的所有方法，否则就必须声明为抽象类。接口没有构造方法。接口中每一个方法也是隐式抽">
 
 
 
@@ -154,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/20/two-types-of-transfer/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/03/Comparable-interface/"/>
 
 
 
 
 
-  <title>two types of transfer | MubaiLi's Blog</title>
+  <title>Cmparable接口和compareTo方法 | MubaiLi's Blog</title>
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/20/two-types-of-transfer/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/03/Comparable-interface/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mubai Li">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">two types of transfer</h1>
+          <h1 class="post-title" itemprop="name headline">Cmparable接口和compareTo方法</h1>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-20T23:14:52+08:00">
-                2017-09-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-03T09:28:52+08:00">
+                2017-10-03
               </time>
             
 
@@ -396,12 +396,13 @@
       
 
       
-        <h3 id="值传递"><a href="#值传递" class="headerlink" title="值传递"></a>值传递</h3><p>方法调用时，实际参数把它的值传递给对应的形式参数，形参改变，不影响实参。传递的是值的拷贝，拷贝的值用完之后就会被释放。</p>
-<hr>
- <a id="more"></a>
-<h3 id="引用传递"><a href="#引用传递" class="headerlink" title="引用传递"></a>引用传递</h3><p>方法调用时，实际参数的引用（地址）被传递给方法中相对应的形式参数，形参改变之后，实参也随之改变。</p>
-<hr>
-<p>这里用一个例子说明一下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">    String str = <span class="keyword">new</span> String(<span class="string">"good"</span>);</div><div class="line">    <span class="keyword">char</span>[] ch = &#123;<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>&#125;;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</div><div class="line">        Test test = <span class="keyword">new</span> Test();</div><div class="line">        test.change(test.str, test.ch); <span class="comment">//str是值传递，ch为数组，是引用传递</span></div><div class="line">        System.out.print(test.str + <span class="string">" and "</span>);</div><div class="line">        System.out.print(test.ch);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">change</span><span class="params">(String str, <span class="keyword">char</span> ch[])</span> </span>&#123;</div><div class="line">        str = <span class="string">"test ok"</span>;</div><div class="line">        ch[<span class="number">0</span>] = <span class="string">'g'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//运行结果为 good and gbc</span></div></pre></td></tr></table></figure></p>
+        <p><strong>接口（interface）</strong>，在JAVA编程语言中是一个抽象类型，是抽象方法的集合。一个类可以实现（implement）一个或多个接口，并在需要接口的地方，随时使用实现了相应接口的对象。<br>接口并不是类，编写接口的方式和类很相似，但是它们属于不同的概念。<br>接口无法被实例化，但是可以被实现。一个实现接口的类，必须实现接口内所描述的所有方法，否则就必须声明为抽象类。接口没有构造方法。接口中每一个方法也是隐式抽象的,接口中的方法会被隐式的指定为public abstract；接口中可以含有变量，但是接口中的变量会被隐式的指定为public static final变量。</p>
+<h2 id=""><a href="#" class="headerlink" title=" "></a> <a id="more"></a></h2><p>在刷题的时候，比如说PAT Basic 1055中的Student类：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student1055</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">Student1055</span>&gt; </span>&#123;</div><div class="line">    String name;</div><div class="line">    <span class="keyword">int</span> height;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student1055</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>(<span class="string">""</span>, <span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student1055</span><span class="params">(String aName, <span class="keyword">int</span> aHeight)</span> </span>&#123;</div><div class="line">        name = aName;</div><div class="line">        height = aHeight;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Student1055 o)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.height &lt; o.height) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.height &gt; o.height) &#123;</div><div class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name.compareTo(o.name);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>需要用Arrays类中的sort方法对对象数组进行排序，这时候就可以让这个对象类实现Comparable接口，然后在类中覆盖（override）compareTo方法。</p>
+<blockquote>
+<p><em>compareTo方法</em><br><strong>int compareTo(T other)</strong><br>用这个对象与other进行比较。如果这个对象小于other则返回负值；如果相等则返回0；否则返回正值</p>
+</blockquote>
+<p>例如，对于以上Student类，执行Arrays.sort(对象数组名)方法后，对象数组按照height从小到大（height相等，按name的字典序）的顺序排序。</p>
 
       
     </div>
@@ -434,8 +435,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/20/String-type/" rel="next" title="String类型及其内存分配">
-                <i class="fa fa-chevron-left"></i> String类型及其内存分配
+              <a href="/2017/10/03/PAT-Basic-1055/" rel="next" title="PAT Basic 1055. 集体照">
+                <i class="fa fa-chevron-left"></i> PAT Basic 1055. 集体照
               </a>
             
           </div>
@@ -444,8 +445,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/09/20/Order-of-class-initialization/" rel="prev" title="类的初始化顺序">
-                类的初始化顺序 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/10/03/PAT-Basic-1058/" rel="prev" title="PAT Basic 1058. 选择题">
+                PAT Basic 1058. 选择题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -627,7 +628,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#值传递"><span class="nav-number">1.</span> <span class="nav-text">值传递</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用传递"><span class="nav-number">2.</span> <span class="nav-text">引用传递</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"> </span></a></li></ol></div>
             
 
           </div>
