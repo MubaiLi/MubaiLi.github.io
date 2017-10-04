@@ -97,7 +97,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java,基础知识," />
+  <meta name="keywords" content="Java,刷题," />
 
 
 
@@ -113,18 +113,18 @@
 
 
 
-<meta name="description" content="接口（interface），在JAVA编程语言中是一个抽象类型，是抽象方法的集合。一个类可以实现（implement）一个或多个接口，并在需要接口的地方，随时使用实现了相应接口的对象。接口并不是类，编写接口的方式和类很相似，但是它们属于不同的概念。接口无法被实例化，但是可以被实现。一个实现接口的类，必须实现接口内所描述的所有方法，否则就必须声明为抽象类。接口没有构造方法。接口中每一个方法也是隐式抽">
-<meta name="keywords" content="Java,基础知识">
+<meta name="description" content="“单身狗”是中文对于单身人士的一种爱称(手动斜眼)。本题请你从上万人的大型派对中找出落单的客人，以便给予特殊关爱。">
+<meta name="keywords" content="Java,刷题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cmparable接口和compareTo方法">
-<meta property="og:url" content="http://yoursite.com/2017/10/03/Comparable-interface/index.html">
+<meta property="og:title" content="PAT Basic 1065. 单身狗">
+<meta property="og:url" content="http://yoursite.com/2017/10/04/PAT-Basic-1065/index.html">
 <meta property="og:site_name" content="MubaiLi&#39;s Blog">
-<meta property="og:description" content="接口（interface），在JAVA编程语言中是一个抽象类型，是抽象方法的集合。一个类可以实现（implement）一个或多个接口，并在需要接口的地方，随时使用实现了相应接口的对象。接口并不是类，编写接口的方式和类很相似，但是它们属于不同的概念。接口无法被实例化，但是可以被实现。一个实现接口的类，必须实现接口内所描述的所有方法，否则就必须声明为抽象类。接口没有构造方法。接口中每一个方法也是隐式抽">
+<meta property="og:description" content="“单身狗”是中文对于单身人士的一种爱称(手动斜眼)。本题请你从上万人的大型派对中找出落单的客人，以便给予特殊关爱。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-03T09:12:42.566Z">
+<meta property="og:updated_time" content="2017-10-04T09:13:57.438Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cmparable接口和compareTo方法">
-<meta name="twitter:description" content="接口（interface），在JAVA编程语言中是一个抽象类型，是抽象方法的集合。一个类可以实现（implement）一个或多个接口，并在需要接口的地方，随时使用实现了相应接口的对象。接口并不是类，编写接口的方式和类很相似，但是它们属于不同的概念。接口无法被实例化，但是可以被实现。一个实现接口的类，必须实现接口内所描述的所有方法，否则就必须声明为抽象类。接口没有构造方法。接口中每一个方法也是隐式抽">
+<meta name="twitter:title" content="PAT Basic 1065. 单身狗">
+<meta name="twitter:description" content="“单身狗”是中文对于单身人士的一种爱称(手动斜眼)。本题请你从上万人的大型派对中找出落单的客人，以便给予特殊关爱。">
 
 
 
@@ -154,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/03/Comparable-interface/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/04/PAT-Basic-1065/"/>
 
 
 
 
 
-  <title>Cmparable接口和compareTo方法 | MubaiLi's Blog</title>
+  <title>PAT Basic 1065. 单身狗 | MubaiLi's Blog</title>
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/03/Comparable-interface/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/04/PAT-Basic-1065/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mubai Li">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Cmparable接口和compareTo方法</h1>
+          <h1 class="post-title" itemprop="name headline">PAT Basic 1065. 单身狗</h1>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-03T09:28:52+08:00">
-                2017-10-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-04T17:13:25+08:00">
+                2017-10-04
               </time>
             
 
@@ -359,8 +359,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java基础知识/" itemprop="url" rel="index">
-                    <span itemprop="name">Java基础知识</span>
+                  <a href="/categories/刷题/" itemprop="url" rel="index">
+                    <span itemprop="name">刷题</span>
                   </a>
                 </span>
 
@@ -396,13 +396,22 @@
       
 
       
-        <p><strong>接口（interface）</strong>，在JAVA编程语言中是一个抽象类型，是抽象方法的集合。一个类可以实现（implement）一个或多个接口，并在需要接口的地方，随时使用实现了相应接口的对象。<br>接口并不是类，编写接口的方式和类很相似，但是它们属于不同的概念。<br>接口无法被实例化，但是可以被实现。一个实现接口的类，必须实现接口内所描述的所有方法，否则就必须声明为抽象类。接口没有构造方法。接口中每一个方法也是隐式抽象的,接口中的方法会被隐式的指定为public abstract；接口中可以含有变量，但是接口中的变量会被隐式的指定为public static final变量。</p>
-<h2 id=""><a href="#" class="headerlink" title=" "></a> <a id="more"></a></h2><p>在刷题的时候，比如说PAT Basic 1055中的Student类：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student1055</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">Student1055</span>&gt; </span>&#123;</div><div class="line">    String name;</div><div class="line">    <span class="keyword">int</span> height;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student1055</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>(<span class="string">""</span>, <span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student1055</span><span class="params">(String aName, <span class="keyword">int</span> aHeight)</span> </span>&#123;</div><div class="line">        name = aName;</div><div class="line">        height = aHeight;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Student1055 o)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.height &lt; o.height) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.height &gt; o.height) &#123;</div><div class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name.compareTo(o.name);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>需要用Arrays类中的sort方法对对象数组进行排序，这时候就可以让这个对象类实现Comparable接口，然后在类中覆盖（override）compareTo方法。</p>
+        <p>“单身狗”是中文对于单身人士的一种<strong>爱称</strong>(<em>手动斜眼</em>)。本题请你从上万人的大型派对中找出落单的客人，以便给予特殊关爱。<br> <a id="more"></a><br>输入格式：</p>
+<p>输入第一行给出一个正整数N（&lt;=50000），是已知夫妻/伴侣的对数；随后N行，每行给出一对夫妻/伴侣——为方便起见，每人对应一个ID号，为5位数字（从00000到99999），ID间以空格分隔；之后给出一个正整数M（&lt;=10000），为参加派对的总人数；随后一行给出这M位客人的ID，以空格分隔。题目保证无人重婚或脚踩两条船。</p>
+<p>输出格式：</p>
+<p>首先第一行输出落单客人的总人数；随后第二行按ID递增顺序列出落单的客人。ID间用1个空格分隔，行的首尾不得有多余空格。</p>
+<p>输入样例：</p>
 <blockquote>
-<p><em>compareTo方法</em><br><strong>int compareTo(T other)</strong><br>用这个对象与other进行比较。如果这个对象小于other则返回负值；如果相等则返回0；否则返回正值</p>
+<p>3<br>11111 22222<br>33333 44444<br>55555 66666<br>7<br>55555 44444 10000 88888 22222 11111 23333</p>
 </blockquote>
-<p>例如，对于以上Student类，执行Arrays.sort(对象数组名)方法后，对象数组按照height从小到大（height相等，按name的字典序）的顺序排序。</p>
+<p>输出样例：</p>
+<blockquote>
+<p>5<br>10000 23333 44444 55555 88888</p>
+</blockquote>
+<hr>
+<p>基本思路：<br>利用两个数组分别存伴侣两人的编号。对于party中的每个人，首先查找其编号是否在两个数组中，如果不在，则说明没有伴侣；如果在其中，继续查找其伴侣的编号是否也在party中，如果不在，则说明有伴侣、但是伴侣不在。以上这两种人（没有伴侣和伴侣不在party）识别为落单，add到list中。</p>
+<hr>
+<p>Java实现代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.io.BufferedReader;</div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.io.InputStreamReader;</div><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.Collections;</div><div class="line"><span class="keyword">import</span> java.util.List;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</div><div class="line">        <span class="keyword">int</span> N = Integer.parseInt(br.readLine());</div><div class="line">        <span class="keyword">int</span>[] cp1 = <span class="keyword">new</span> <span class="keyword">int</span>[N];</div><div class="line">        <span class="keyword">int</span>[] cp2 = <span class="keyword">new</span> <span class="keyword">int</span>[N];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i ++) &#123;</div><div class="line">            String[] cp_str = br.readLine().split(<span class="string">" "</span>);</div><div class="line">            cp1[i] = Integer.parseInt(cp_str[<span class="number">0</span>]);</div><div class="line">            cp2[i] = Integer.parseInt(cp_str[<span class="number">1</span>]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> M = Integer.parseInt(br.readLine());</div><div class="line">        <span class="keyword">int</span>[] party = <span class="keyword">new</span> <span class="keyword">int</span>[M];</div><div class="line">        String[] str = br.readLine().split(<span class="string">" "</span>);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; M; i ++) &#123;</div><div class="line">            party[i] = Integer.parseInt(str[i]);</div><div class="line">        &#125;</div><div class="line">        List&lt;Integer&gt; single = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; M; i ++) &#123;</div><div class="line">            <span class="keyword">boolean</span> hasCp = <span class="keyword">false</span>;</div><div class="line">            <span class="keyword">boolean</span> cpIsHere = <span class="keyword">false</span>;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; N; j ++) &#123;</div><div class="line">                <span class="keyword">if</span> (party[i] == cp1[j]) &#123;</div><div class="line">                    hasCp = <span class="keyword">true</span>;</div><div class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; M; k ++) &#123;</div><div class="line">                        <span class="keyword">if</span> (cp2[j] == party[k]) &#123;</div><div class="line">                            cpIsHere = <span class="keyword">true</span>;</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (party[i] == cp2[j]) &#123;</div><div class="line">                    hasCp = <span class="keyword">true</span>;</div><div class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; M; k ++) &#123;</div><div class="line">                        <span class="keyword">if</span> (cp1[j] == party[k]) &#123;</div><div class="line">                            cpIsHere = <span class="keyword">true</span>;</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (!hasCp) &#123;</div><div class="line">                single.add(party[i]);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!cpIsHere) &#123;</div><div class="line">                single.add(party[i]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        Collections.sort(single);</div><div class="line">        </div><div class="line">        System.out.println(single.size());</div><div class="line">        <span class="keyword">boolean</span> isFirst = <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; single.size(); i ++) &#123;</div><div class="line">            <span class="keyword">if</span> (isFirst) &#123;</div><div class="line">                System.out.print(single.get(i));</div><div class="line">                isFirst = <span class="keyword">false</span>;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                System.out.print(<span class="string">" "</span> + single.get(i));</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -422,7 +431,7 @@
           
             <a href="/tags/Java/" rel="tag"># Java</a>
           
-            <a href="/tags/基础知识/" rel="tag"># 基础知识</a>
+            <a href="/tags/刷题/" rel="tag"># 刷题</a>
           
         </div>
       
@@ -435,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/03/PAT-Basic-1055/" rel="next" title="PAT Basic 1055. 集体照">
-                <i class="fa fa-chevron-left"></i> PAT Basic 1055. 集体照
+              <a href="/2017/10/03/PAT-Basic-1058/" rel="next" title="PAT Basic 1058. 选择题">
+                <i class="fa fa-chevron-left"></i> PAT Basic 1058. 选择题
               </a>
             
           </div>
@@ -444,10 +453,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/03/PAT-Basic-1058/" rel="prev" title="PAT Basic 1058. 选择题">
-                PAT Basic 1058. 选择题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -525,17 +530,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">Mubai Li</p>
@@ -618,22 +614,6 @@ var jiathis_config={
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"> </span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
